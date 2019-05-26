@@ -38,4 +38,14 @@ public class Player : MonoBehaviour {
 
         Destroy(collider.gameObject);
     }
+
+    public void reset()
+    {
+        score = 0;
+        lives = 3;
+
+        Vector3 pos = this.transform.position;
+        pos.x = 0.0f;
+        this.transform.position = pos;
+    }
 }

@@ -7,6 +7,8 @@ public class ShapeSpawner : MonoBehaviour {
     public GameObject badShape;
     public GameObject goodShape;
 
+    public GameObject shapeRoot;
+
     private GameObject[] shapes;
 
     private float t;
@@ -15,6 +17,8 @@ public class ShapeSpawner : MonoBehaviour {
 	void Start ()
     {
         shapes = new GameObject[] { badShape, goodShape };
+
+        shapeRoot = new GameObject("shapeRoot");
 
         t = 0;
 	}
@@ -29,7 +33,7 @@ public class ShapeSpawner : MonoBehaviour {
 
             int shapeInd = Random.Range(0, 2);
 
-            Instantiate(shapes[shapeInd], new Vector3(spawnPoint, this.transform.position.y, 0.0f), Quaternion.identity);
+            Instantiate(shapes[shapeInd], new Vector3(spawnPoint, this.transform.position.y, 0.0f), Quaternion.identity, shapeRoot.GetComponent<Transform>());
 
             t = 0.0f;
         }

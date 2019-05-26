@@ -62,9 +62,8 @@ public class LivesHelper : MonoBehaviour {
         {
             foreach (GameObject obj in lifeObjects)
             {
-                obj.GetComponent<SpriteRenderer>().enabled = true;
+                obj.GetComponent<SpriteRenderer>().enabled = false;
             }
-            // DO GAMEOVER
         }
 	}
 }
