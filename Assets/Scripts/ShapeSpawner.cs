@@ -22,7 +22,7 @@ public class ShapeSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (t >= 2.0f)
+        if (t >= 1.0f)
         {
             float spawnPoint = Random.Range(Camera.main.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, 0.0f)).x + 1.0f,
                 Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0.0f, 0.0f)).x - 1.0f);
